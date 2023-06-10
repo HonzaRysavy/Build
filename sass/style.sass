@@ -6,6 +6,9 @@
     max-width: 1170px
     width: 96%
     margin: auto
+    @media (max-width: 640px)
+        width: 90%
+
 body
     font-family: sans-serif
 .header
@@ -43,9 +46,74 @@ body
         border-radius: 10px
         margin-left: 30px
 .main
+    background-color: $grey
+
     &-block
         display: flex
-        align-items: center
+        padding: 40px 0 15px 0
+        @media (max-width: 1200px)
+            flex-direction: column
+    &-text
+        flex-basis: 50%
+        @media (max-width: 1200px)
+            margin-bottom: 30px
+        &__title
+            line-height: 55px
+            font-size: 41px
+            color: $accent
+            margin: 45px 0 20px 0
+        @media (max-width: 640px)
+                font-size: 38px
+                line-height: 1.4
+                
+        &__subtitle
+            color: $accent
+            font-size: 20px
+            line-height: 65px
+            margin-top: 46px    
+    &-image
+        padding-right: -55px
+        @media (max-width: 1200px)
+            width: 100%
+        @media (max-width: 640px)
+            img
+                width: 100%
+            
+        
+    &-list
+        margin: 40px 0 0 0
+        padding: 0 0 0 0
+        @media (max-width: 640px)
+                margin: 30px 0 0 0 
+        &__item
+            display: flex        
+            align-items: center
+            @media (max-width: 640px)
+                margin-bottom: 15px
+            
+        &__text
+            font-size: 14px
+            line-height: 24px
+            color: $accent 
+            margin-bottom: 20px
+            max-width: 290px
+            @media (max-width: 640px)
+                font-size: 12px
+                max-width: 250px
+            
+        &__image
+            width: 40px
+            height: 40px
+            border: 2px solid #ffd200
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-right: 30px
+            margin-bottom: 20px
+        
+    
+            
         
     
         
